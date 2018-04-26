@@ -1,0 +1,15 @@
+<nav class = "navbar navbar-default">
+<div class = "container-fluid">
+  <div *ngIf="isLoggedIn()==false" class = "nav navbar-nav" >
+    <li routerLinkActive = "active current"><a routerLink = '/login'>Login</a></li>
+    </div>
+    <div class = "nav navbar-nav" *ngIf = "isLoggedIn()">
+    <li routerLinkActive = "active current"><a routerLink = '/createuser'>Create User</a></li>    
+    <li *ngIf= "!whatStatus()"routerLinkActive = "active current"><a routerLink = '/createreimb'>New Reimbursement</a></li>
+    <li *ngIf= "!whatStatus()"routerLinkActive = "active current"><a routerLink = '/viewhistory'>View History </a></li>
+    <li routerLinkActive = "active current"><a routerLink = '/profile'>Profile</a></li>
+    <li *ngIf= "whatStatus()" routerLinkActive = "active current"><a routerLink = '/man-viewreimb'>View All Reimbursements</a></li>
+    <li routerLinkActive = "current"><a routerLink = '/login' button (click)="logout()" >Log Out</a></li>
+  </div>
+  <img src = "https://revature.com/wp-content/uploads/2017/12/revature-logo-600x219.png" height= "45" width="125" align = "right">
+</div>

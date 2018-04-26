@@ -1,0 +1,26 @@
+<form>
+  <form (ngSubmit)="submit()">
+    Author:<br>
+    <input type ="text" name ="author" [(ngModel)]="reimb.reimb_author"  disabled/>
+    <br>
+    Date:<br>
+    <input type ="text" name="date" [(ngModel)] = "now" disabled />
+    <br>
+    Amount:<br> 
+    <input type ="text" name ="amount" [(ngModel)]="reimb.reimb_amount"/>
+    <br>
+    Type: <br>
+    <select name="Type" [(ngModel)]="reimb.reimb_type_id">
+        <option value="1">Travel</option>
+        <option value="2">Medical</option>
+        <option value="3">Business</option>
+        <option value="4">Other</option>
+      </select>
+      <br>
+      Description: <br>
+      <input type ="text" name ="description" [(ngModel)]="reimb.reimb_description"/>
+      <br><br>
+    <button type ="submit">Submit Changes!</button>
+  </form>
+  <div >
+ </div>

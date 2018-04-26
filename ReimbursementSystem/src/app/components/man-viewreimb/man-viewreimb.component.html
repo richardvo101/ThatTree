@@ -1,0 +1,36 @@
+ <br>
+<table class="text-left" class="table table-striped table-hover" >
+    <thead>
+      <tr>
+        <th>REIMB ID</th>
+        <th>REIMB AUTHOR</th>
+        <th>REIMB AMOUNT</th>
+        <th>REIMB SUBMITTED</th>
+        <th>REIMB RESOLVED</th>
+        <th>REIMB RESOLVER</th>
+        <th>REIMB DESCRIPTION</th>
+        <th>REIMB STATUS ID</th>
+        <th>REIMB TYPE ID</th>
+      </tr>
+    </thead> 
+    <tbody>
+    <tr *ngFor = "let reimb of reimbs | tablefilter : item"  (click) ="redirect(reimb)">
+      <td >{{reimb.reimb_id}}</td>
+      <td>{{reimb.reimb_author}}</td>
+      <td>{{reimb.reimb_amount}}</td>
+      <td>{{reimb.reimb_submitted | date: 'dd-MMM-yyyy'}}</td>
+      <td>{{reimb.reimb_resolved | date: 'dd-MMM-yyyy'}}</td>
+      <td>{{reimb.reimb_resolver}}</td>
+      <td>{{reimb.reimb_description}}</td>
+      <td>{{reimb.reimb_status_id | sfilter}}</td>
+      <td>{{reimb.reimb_type_id| tfilter}}</td>
+     </tr>
+    </tbody>
+    </table>
+    <div align="right">
+        Status:
+        <button type="button" (click)="changer(0)">  All  </button>
+        <button type="button" (click)="changer(1)">Pending</button>
+        <button type="button" (click)="changer(2)">Approve</button>
+        <button type="button" (click)="changer(3)">Denied </button>
+        </div>

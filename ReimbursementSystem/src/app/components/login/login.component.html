@@ -1,0 +1,16 @@
+<form>
+  <form (ngSubmit)="submit()">
+    Username:<br>
+    <input type ="text" name ="username" [(ngModel)]="credential.ers_username"/>
+    <br>
+    Password:  <br>
+    <input type ="password" name="password" [(ngModel)] ="credential.ers_password"/>
+    <br><br>
+    <button type ="submit" >Submit!</button>
+  </form>
+  
+  <br>
+  <p class="alert-message" *ngIf="alert">
+    {{alert}}
+  </p>
+</form>

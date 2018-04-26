@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Project_1</display-name>
+  <filter>
+    <filter-name>originFilter</filter-name>
+    <filter-class>com.revature.project.jdbc.OriginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>originFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RequestReimb</display-name>
+    <servlet-name>RequestReimb</servlet-name>
+    <servlet-class>com.revature.project1.servlets.RequestReimb</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestReimb</servlet-name>
+    <url-pattern>/RequestReimb</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReadAllReimbServlet</display-name>
+    <servlet-name>ReadAllReimbServlet</servlet-name>
+    <servlet-class>com.revature.project1.servlets.ReadAllReimbServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadAllReimbServlet</servlet-name>
+    <url-pattern>/ReadAllReimbServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateReimbursement</display-name>
+    <servlet-name>UpdateReimbursement</servlet-name>
+    <servlet-class>com.revature.project1.servlets.UpdateReimbursement</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateReimbursement</servlet-name>
+    <url-pattern>/UpdateReimbursement</url-pattern>
+  </servlet-mapping>
+</web-app>

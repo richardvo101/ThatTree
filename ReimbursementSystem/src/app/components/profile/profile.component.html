@@ -1,0 +1,27 @@
+<form>
+    <form (ngSubmit)="submit()">
+      <!-- Employee ID:<br>
+      <input type = "text" name = "firstname" disabled [(ngModel)] = "usi.ers_user_id" value = {{ers_user_id}} /> -->
+     <br>
+      First Name:<br>
+      <input type ="text" name ="firstname" [(ngModel)]="usi.user_first_name"/>
+      <br>
+      Last Name:  <br>
+      <input type ="text" name="lastname" [(ngModel)] ="usi.user_last_name"/>
+      <br>
+      Email:<br>
+      <input type = "email" name="email" [(ngModel)] ="usi.user_email"/>
+      <br>
+      Username: <br> 
+      <input type ="text" name ="username" [(ngModel)]="usi.ers_username"/>
+      <br>
+      Password: <br>
+      <input type ="password" name ="password" [(ngModel)]="usi.ers_password"/>
+      <br><br>
+
+      <button type ="submit">Submit Changes!</button>
+      <p class="alert-message" *ngIf="alert">
+          {{alert}}
+        </p>
+    </form>
+    
